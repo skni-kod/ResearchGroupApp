@@ -70,6 +70,27 @@ class ArticleDetailScreen(MDScreen):
         print(request)
         print(result)
 
+
+class SectionScreen(MDScreen):
+    pass
+
+
+class ProjectListScreen(MDScreen):
+    pass
+
+
+class ProjectDetailScreen(MDScreen):
+    pass
+
+
+class PartnerList(MDScreen):
+    pass
+
+    def on_fetch_error(self, request, result):
+        print("ERROR")
+        print(request)
+        print(result)
+
 class MainScreen(MDScreen):
     pass
 

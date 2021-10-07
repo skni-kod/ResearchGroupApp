@@ -2,7 +2,7 @@
 
 <ArticleListItem>:
     on_release:
-        print(app.root.get_screen("article_detail").ids)
+        app.root.get_screen("article_detail").article_id = self.article_id
         app.root.current = 'article_detail'
 
 <ArticleListScreen>:
