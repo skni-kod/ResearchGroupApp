@@ -1,23 +1,25 @@
 #:kivy 2.0.0
 
 <MainScreen>:
-    FloatLayout:
+    BoxLayout:
         size: root.size
-        BoxLayout:
-            size_hint: 1, 1
-            orientation: 'vertical'
-            Image:
-                size_hint: 1, 0.3
-                source: 'assets/logo_color.png'
-            GridLayout:
-                size_hint: 1, 0.7
-                cols: 2
-                rows: 2
-                Button:
-                    text: "Aktualności"
-                Button:
-                    text: "Sekcje"
-                Button:
-                    text: "Projekty"
-                Button:
-                    text: "Partnerzy"
+        size_hint: 1, 1
+        orientation: 'vertical'
+        Image:
+            size_hint: 1, 0.3
+            source: 'assets/logo_color.png'
+        GridLayout:
+            size_hint: 1, 0.7
+            cols: 2
+            rows: 2
+            padding: [10, 10, 10, 10]
+            spacing: [10, 10]
+            Button:
+                text: "Aktualności"
+                on_press: root.manager.current = 'article_list'
+            Button:
+                text: "Sekcje"
+            Button:
+                text: "Projekty"
+            Button:
+                text: "Partnerzy"
