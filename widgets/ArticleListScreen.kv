@@ -1,0 +1,23 @@
+#:kivy 2.0.0
+
+<ArticleListItem>:
+    on_release:
+        print(app.root.get_screen("article_detail").ids)
+        app.root.current = 'article_detail'
+
+<ArticleListScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title: "Artykuły"
+        MDFloatLayout:
+            ScrollView:
+                MDList:
+                    id: article_list
+                    active: False
+            MDSpinner:
+                id: loading_spinner
+                active: True
+                size_hint: None, None
+                size: dp(46), dp(46)
+                pos_hint: {'center_x': .5, 'center_y': .5}
